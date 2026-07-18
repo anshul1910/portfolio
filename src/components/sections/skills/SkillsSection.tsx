@@ -11,7 +11,7 @@ export default function SkillsSection() {
     skillCategories.find((c) => c.id === activeCategory) ?? skillCategories[0];
 
   return (
-    <section id="skills" className="mx-auto max-w-6xl px-6 py-28">
+    <section id="skills" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
         eyebrow="03 — Skills"
         title="Tools I reach for"

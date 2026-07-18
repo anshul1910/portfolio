@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-28">
+    <section id="projects" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
         eyebrow="04 — Projects"
         title="Selected work"

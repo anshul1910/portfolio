@@ -5,7 +5,7 @@ import SectionHeading from "@/components/shared/SectionHeading";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-6 py-28">
+    <section id="about" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
         eyebrow="01 — About"
         title="Software engineer, not just code writer"

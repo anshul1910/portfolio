@@ -4,7 +4,7 @@ import ExperienceCard from "./ExperienceCard";
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="mx-auto max-w-4xl px-6 py-28">
+    <section id="experience" className="relative mx-auto max-w-4xl px-6 py-28">
       <SectionHeading
         eyebrow="02 — Experience"
         title="Where I've worked"

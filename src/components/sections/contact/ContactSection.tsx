@@ -16,7 +16,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-6 py-28">
+    <section id="contact" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
         eyebrow="06 — Contact"
         title="Let's build something"
