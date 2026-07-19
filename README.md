@@ -16,7 +16,6 @@ A premium, animated personal portfolio built with React 19, TypeScript, Vite, Ta
 - **Experience** — animated vertical timeline
 - **Skills** — tabbed categories with real technology icons (via `react-icons`)
 - **Projects** — tilt/glow project cards with live mouse-tracking, Code and Live Demo links
-- **Learning Journey** — roadmap with animated progress indicators
 - **Contact** — form built with React Hook Form + Zod validation, wired to [EmailJS](https://emailjs.com) (falls back to a `mailto:` link if EmailJS isn't configured)
 - **Route-based code splitting**, accessible semantic markup, and full keyboard navigation support
 
@@ -86,11 +85,11 @@ npm run preview
 src/
 ├── components/
 │   ├── layout/       # Navbar, Footer, MainLayout
-│   ├── sections/      # One folder per page section (hero, about, experience, skills, projects, learning, contact)
+│   ├── sections/      # One folder per page section (hero, about, experience, skills, projects, contact)
 │   ├── shared/        # SectionHeading, LoadingScreen, BrandIcons
 │   └── ui/            # Reusable design-system primitives (Button, etc.)
 ├── contexts/           # ThemeProvider
-├── data/               # All site content — profile.ts, experience.ts, projects.ts, skills.ts, about.ts, learning.ts
+├── data/               # All site content — profile.ts, experience.ts, projects.ts, skills.ts, about.ts
 ├── hooks/               # useActiveSection, useScrollProgress, useRotatingText, useTilt
 ├── pages/               # HomePage, NotFoundPage
 ├── services/            # contact.ts (EmailJS integration)
