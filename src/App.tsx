@@ -6,7 +6,6 @@ import { ThemeProvider } from "@/contexts/theme-context";
 import MainLayout from "@/layouts/MainLayout";
 import HomePage from "@/pages/HomePage";
 import LoadingScreen from "@/components/shared/LoadingScreen";
-import CommandPalette from "@/components/shared/CommandPalette";
 
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
@@ -26,7 +25,6 @@ function App() {
       <ThemeProvider>
         <LoadingScreen />
         <BrowserRouter>
-          <CommandPalette />
           <Routes>
             <Route element={<MainLayout />}>
               <Route path="/" element={<HomePage />} />

@@ -7,7 +7,7 @@ export const profile = {
   phone: "+91 8077615676",
   github: "https://github.com/anshul1910",
   linkedin: "https://linkedin.com/in/anshuldhiman19",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Anshul Dhiman.pdf",
   tagline:
     "Full-stack engineer who ships production software — Flutter and React on the front end, Node.js and Express behind it. I've built and shipped a live GST billing platform handling 25+ integrated APIs for real business clients at Techrays Labs, and I'm always looking for the next hard problem worth solving.",
   shortTagline:

@@ -10,9 +10,9 @@ export const experienceItems: ExperienceItem[] = [
     responsibilities: [
       "Sole developer owning both the Flutter mobile app and the React web dashboard for a production GST invoicing and billing platform",
       "Integrated 25+ REST APIs powering GST validation, invoice generation, and payment workflows",
-      "Designed and built responsive UI components, dashboards, and onboarding flows shared across mobile and web",
-      "Worked in a weekly Agile/Scrum cycle alongside backend engineers, designers, and QA to ship features end to end",
-      "Profiled and debugged performance issues on both platforms to keep the product stable for active business clients",
+      "Designed and shipped responsive dashboards and onboarding flows consistent across both platforms",
+      "Shipped features end to end within a weekly Agile/Scrum cycle, working directly with backend engineers, designers, and QA",
+      "Diagnosed and resolved performance and stability issues across both platforms for active business clients relying on the product daily",
     ],
     technologies: [
       "Flutter",
@@ -30,11 +30,11 @@ export const experienceItems: ExperienceItem[] = [
     duration: "February 2025 — June 2025",
     location: "Ahmedabad, India",
     responsibilities: [
-      "Built Flutter applications end to end — authentication flows, navigation, and responsive layouts — using Provider for state management",
+      "Built Flutter applications end to end, including authentication flows, navigation, and responsive layouts, using Provider for state management",
       "Integrated REST APIs to connect Vue.js and Flutter projects to backend services",
-      "Contributed across the stack on web apps built with Vue.js, Nuxt.js, Node.js, Express.js, and MongoDB",
+      "Contributed full-stack on web applications built with Vue.js, Nuxt.js, Node.js, Express.js, and MongoDB",
       "Reviewed code and managed version control through Git and GitHub as part of a small product team",
-      "Built a real-time chat feature with Nuxt.js, Node.js, Express.js, MongoDB, and Socket.IO as a hands-on introduction to WebSockets",
+      "Built a real-time chat feature using Socket.IO over Nuxt.js, Node.js, Express.js, and MongoDB — my first hands-on introduction to WebSockets",
     ],
     technologies: [
       "Flutter",

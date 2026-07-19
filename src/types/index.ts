@@ -30,7 +30,6 @@ export interface ProjectItem {
   tagline: string;
   description: string;
   image: string;
-  features: string[];
   techStack: string[];
   githubUrl?: string;
   liveUrl?: string;
