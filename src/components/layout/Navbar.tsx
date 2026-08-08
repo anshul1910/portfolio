@@ -6,7 +6,6 @@ import { NAV_LINKS } from "@/constants/navigation";
 import { profile } from "@/data/profile";
 import { useTheme } from "@/hooks/useTheme";
 import { useActiveSection } from "@/hooks/useActiveSection";
-import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { cn } from "@/utils/cn";
 
 const SECTION_IDS = NAV_LINKS.map((l) => l.href.replace("#", ""));
@@ -16,7 +15,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const activeId = useActiveSection(SECTION_IDS);
-  const progress = useScrollProgress();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -140,13 +138,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className="absolute inset-x-0 -bottom-px h-px bg-[rgb(var(--border))]/0">
-        <div
-          className="h-full bg-accent-500 transition-[width] duration-150"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
-
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -154,40 +145,42 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="glass mx-4 mt-3 flex flex-col gap-1 rounded-3xl p-4 lg:hidden"
+            className="mx-4 mt-3 lg:hidden"
           >
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm font-medium text-[rgb(var(--fg-muted))] transition-colors hover:bg-[rgb(var(--bg-elevated))] hover:text-[rgb(var(--fg))]"
-              >
-                {link.label}
-              </a>
-            ))}
-            <div className="mt-2 flex items-center justify-between border-t border-[rgb(var(--border))] px-4 pt-4">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col gap-1 rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--card)/0.92)] backdrop-blur-xl p-4">
+              {NAV_LINKS.map((link) => (
                 <a
-                  href={profile.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="GitHub"
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-xl px-4 py-3 text-sm font-medium text-[rgb(var(--fg-muted))] transition-colors hover:bg-[rgb(var(--bg-elevated))] hover:text-[rgb(var(--fg))]"
                 >
-                  <GithubIcon width={18} height={18} />
+                  {link.label}
                 </a>
-                <a
-                  href={profile.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedinIcon width={18} height={18} />
-                </a>
+              ))}
+              <div className="mt-2 flex items-center justify-between border-t border-[rgb(var(--border))] px-4 pt-4">
+                <div className="flex items-center gap-3">
+                  <a
+                    href={profile.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <GithubIcon width={18} height={18} />
+                  </a>
+                  <a
+                    href={profile.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <LinkedinIcon width={18} height={18} />
+                  </a>
+                </div>
+                <button onClick={toggleTheme} aria-label="Toggle theme">
+                  {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                </button>
               </div>
-              <button onClick={toggleTheme} aria-label="Toggle theme">
-                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-              </button>
             </div>
           </motion.div>
         )}
